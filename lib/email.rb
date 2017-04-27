@@ -1,3 +1,7 @@
+require "contacts"
+require "address"
+require "phone_number"
+
 class Email
   @@emails= []
 
@@ -23,5 +27,15 @@ class Email
 
   define_singleton_method(:clear) do
     @@emails = []
+  end
+
+  define_singleton_method(:find) do |id|
+    found_email = nil
+    @@emails.each() do |email|
+      if email.id().eql?(id)
+        found_email = email
+      end
+    end
+    found_email
   end
 end

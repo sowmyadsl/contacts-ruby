@@ -1,4 +1,7 @@
 require "address"
+require "contacts"
+require "email"
+require "phone_number"
 require "rspec"
 require "pry"
 
@@ -22,5 +25,15 @@ describe 'Address' do
   it("returns the id for addresses") do
     address = Address.new({:type=> "home",:street_address=>"6771 NW 163rd ave",:city=>"Portland",:state=>"OR" , :zip_code => "97229"})
     expect(address.id()).to(eq(1))
+  end
+
+  describe(".find") do
+    it("returns a address by its id number") do
+      address = Address.new({:type=> "home",:street_address=>"6771 NW 163rd ave",:city=>"Portland",:state=>"OR" , :zip_code => "97229"})
+      address.save()
+      address2 = Address.new({:type=> "home",:street_address=>"6771 NW 163rd ave",:city=>"Portland",:state=>"OR" , :zip_code => "97229"})
+      address2.save()
+      expect(Address.find(address.id())).to(eq(address))
+    end
   end
 end

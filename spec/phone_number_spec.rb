@@ -1,4 +1,7 @@
 require "phone_number"
+require "contacts"
+require "address"
+require "email"
 require "rspec"
 require "pry"
 
@@ -22,6 +25,16 @@ describe 'phone_number' do
   it("returns the id for phone_numbers") do
     phone_number = Phone_number.new({:type=> "home",:extension=> "891",:area_code=>"503",:number=>"4567890"})
     expect(phone_number.id()).to(eq(1))
+  end
+
+  describe(".find") do
+    it("returns a phone_number by its id number") do
+      phone_number = Phone_number.new({:type=> "home",:extension=> "891",:area_code=>"503",:number=>"4567890"})
+      phone_number.save()
+      phone_number2 = Phone_number.new({:type=> "home",:extension=> "891",:area_code=>"503",:number=>"4567890"})
+      phone_number2.save()
+      expect(Phone_number.find(phone_number.id())).to(eq(phone_number))
+    end
   end
 
 end

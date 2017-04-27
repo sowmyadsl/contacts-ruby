@@ -1,3 +1,7 @@
+require "contacts"
+require "email"
+require "phone_number"
+
 class Address
   @@addresses = []
   attr_accessor(:type,:street_address,:city,:state,:zip_code)
@@ -25,6 +29,16 @@ class Address
 
   define_singleton_method(:clear) do
     @@addresses = []
+  end
+
+  define_singleton_method(:find) do |id|
+    found_address = nil
+    @@addresses.each() do |address|
+      if address.id().eql?(id)
+        found_address = address
+      end
+    end
+    found_address
   end
 
 end

@@ -1,3 +1,7 @@
+require "contacts"
+require "address"
+require "email"
+
 class Phone_number
   @@phone_numbers = []
 
@@ -25,5 +29,15 @@ class Phone_number
 
   define_singleton_method(:clear) do
     @@phone_numbers = []
+  end
+
+  define_singleton_method(:find) do |id|
+    found_phone_number = nil
+    @@phone_numbers.each() do |phone_number|
+      if phone_number.id().eql?(id)
+        found_phone_number = phone_number
+      end
+    end
+    found_phone_number
   end
 end

@@ -1,4 +1,7 @@
 require "email"
+require "phone_number"
+require "contacts"
+require "address"
 require "rspec"
 require "pry"
 
@@ -22,5 +25,15 @@ describe 'email' do
   it("returns the id for emails") do
     email = Email.new({:type=> "home",:email_address => "sowmya.dsl@gmail.com"})
     expect(email.id()).to(eq(1))
+  end
+
+  describe(".find") do
+    it("returns a email by its id number") do
+      email = Email.new({:type=> "home",:email_address => "sowmya.dsl@gmail.com"})
+      email.save()
+      email2 = Email.new({:type=> "home",:email_address => "sowmya.dsl@gmail.com"})
+      email2.save()
+      expect(Email.find(email.id())).to(eq(email))
+    end
   end
 end
