@@ -24,7 +24,7 @@ describe 'Address' do
 
   it("returns the id for addresses") do
     address = Address.new({:type=> "home",:street_address=>"6771 NW 163rd ave",:city=>"Portland",:state=>"OR" , :zip_code => "97229"})
-    expect(address.id()).to(eq(1))
+    expect(address.id()).to(eq("address1"))
   end
 
   describe(".find") do

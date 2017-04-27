@@ -12,7 +12,7 @@ class Contacts
     @last_name = attributes.fetch(:last_name)
     @job_title = attributes.fetch(:job_title)
     @company = attributes.fetch(:company)
-    @id = @@contacts.length().+(1)
+    @id = "contact".+((@@contacts.length().+(1)).to_s)
     @addresses = []
     @phone_numbers = []
     @emails = []

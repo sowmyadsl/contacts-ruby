@@ -24,7 +24,7 @@ describe 'email' do
 
   it("returns the id for emails") do
     email = Email.new({:type=> "home",:email_address => "sowmya.dsl@gmail.com"})
-    expect(email.id()).to(eq(1))
+    expect(email.id()).to(eq("email1"))
   end
 
   describe(".find") do

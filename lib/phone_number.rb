@@ -12,7 +12,7 @@ class Phone_number
     @extension = attributes.fetch(:extension)
     @area_code = attributes.fetch(:area_code)
     @number = attributes.fetch(:number)
-    @id = @@phone_numbers.length().+(1)
+    @id = "phone_number".+((@@phone_numbers.length().+(1)).to_s)
   end
 
   define_method(:id) do

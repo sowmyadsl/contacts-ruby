@@ -25,7 +25,7 @@ describe 'Contacts' do
 
   it("returns the id for contacts") do
     contact = Contacts.new({:first_name => "Sowmya",:last_name=>"Dinavahi",:job_title=>"Jr Developer",:company=>"Epicodus"})
-    expect(contact.id()).to(eq(1))
+    expect(contact.id()).to(eq("contact1"))
   end
 
   describe('#add_address') do

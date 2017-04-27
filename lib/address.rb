@@ -12,7 +12,7 @@ class Address
     @city = attributes.fetch(:city)
     @state = attributes.fetch(:state)
     @zip_code = attributes.fetch(:zip_code)
-    @id = @@addresses.length().+(1)
+    @id = "address".+((@@addresses.length().+(1)).to_s)
   end
 
   define_method(:id) do

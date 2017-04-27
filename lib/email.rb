@@ -10,7 +10,7 @@ class Email
   define_method(:initialize) do |attributes|
     @type = attributes.fetch(:type)
     @email_address = attributes.fetch(:email_address)
-    @id = @@emails.length().+(1)
+    @id = "email".+((@@emails.length().+(1)).to_s)
   end
 
   define_method(:id) do

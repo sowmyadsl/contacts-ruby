@@ -24,7 +24,7 @@ describe 'phone_number' do
 
   it("returns the id for phone_numbers") do
     phone_number = Phone_number.new({:type=> "home",:extension=> "891",:area_code=>"503",:number=>"4567890"})
-    expect(phone_number.id()).to(eq(1))
+    expect(phone_number.id()).to(eq("phone_number1"))
   end
 
   describe(".find") do
