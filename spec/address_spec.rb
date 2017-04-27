@@ -18,4 +18,9 @@ describe 'Address' do
     address.save()
     expect(Address.clear()).to eq ([])
   end
+
+  it("returns the id for addresses") do
+    address = Address.new({:type=> "home",:street_address=>"6771 NW 163rd ave",:city=>"Portland",:state=>"OR" , :zip_code => "97229"})
+    expect(address.id()).to(eq(1))
+  end
 end

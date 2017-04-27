@@ -8,6 +8,11 @@ class Address
     @city = attributes.fetch(:city)
     @state = attributes.fetch(:state)
     @zip_code = attributes.fetch(:zip_code)
+    @id = @@addresses.length().+(1)
+  end
+
+  define_method(:id) do
+    @id
   end
 
   define_singleton_method(:all) do

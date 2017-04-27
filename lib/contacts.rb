@@ -8,8 +8,13 @@ class Contacts
     @last_name = attributes.fetch(:last_name)
     @job_title = attributes.fetch(:job_title)
     @company = attributes.fetch(:company)
+    @id = @@contacts.length().+(1)
   end
 
+  define_method(:id) do
+    @id
+  end
+  
   define_singleton_method(:all) do
     @@contacts
   end

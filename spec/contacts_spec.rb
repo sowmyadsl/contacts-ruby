@@ -19,4 +19,9 @@ describe 'Contacts' do
     contact.save()
     expect(Contacts.clear()).to eq ([])
   end
+
+  it("returns the id for contacts") do
+    contact = Contacts.new({:first_name => "Sowmya",:last_name=>"Dinavahi",:job_title=>"Jr Developer",:company=>"Epicodus"})
+    expect(contact.id()).to(eq(1))
+  end
 end

@@ -19,4 +19,8 @@ describe 'email' do
     expect(Email.clear()).to eq ([])
   end
 
+  it("returns the id for emails") do
+    email = Email.new({:type=> "home",:email_address => "sowmya.dsl@gmail.com"})
+    expect(email.id()).to(eq(1))
+  end
 end

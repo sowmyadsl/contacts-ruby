@@ -8,6 +8,11 @@ class Phone_number
     @extension = attributes.fetch(:extension)
     @area_code = attributes.fetch(:area_code)
     @number = attributes.fetch(:number)
+    @id = @@phone_numbers.length().+(1)
+  end
+
+  define_method(:id) do
+    @id
   end
 
   define_singleton_method(:all) do
