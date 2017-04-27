@@ -1,18 +1,18 @@
-# <!--PROJECT NAME HERE-->
+# Address Book (Ruby)
 
-<!--PROJECT DESCRIPTION HERE-->
+ a webpage that stores the contact information.
 
 ### Prerequisites
 
 Web browser with ES6 compatibility
 Examples: Chrome, Safari
 
-Ruby <!--VERSION HERE-->
+Ruby 2.3.4
 Bundler
 
-### Installing
+### Installations
 
-Installation is quick and easy! First you can open this link <!--HEROKU LINK HERE--> to see the webpage in action live online. Or you can clone this repository to your machine, navigate to the file path in your terminal, and run 'app.rb' by typing '$ruby app.rb'. If you chose to clone the repository, after you run 'app.rb' you will need to copy the localhost path into your web browswer. The standard localhost for Sinatra is port 4567
+Installation is quick and easy! First you can open this link :https://pure-oasis-47976.herokuapp.com/ to see the webpage in action live online. Or you can clone this repository to your machine, navigate to the file path in your terminal, and run 'app.rb' by typing '$ruby app.rb'. If you chose to clone the repository, after you run 'app.rb' you will need to copy the localhost path into your web browswer. The standard localhost for Sinatra is port 4567
 
 ## Built With
 
@@ -28,12 +28,12 @@ Installation is quick and easy! First you can open this link <!--HEROKU LINK HER
 
 | behavior |  input   |  output  |
 |----------|:--------:|:--------:|
-<!--SPECS GO HERE-->
- 
+
+
 ## Authors
 
-* <!--YOUR NAME HERE-->
+Sowmya Dinavahi and Taylor Stephenson
 
 ## License
 
-Copyright © 2017 <!--YOUR NAME HERE-->
+Copyright © 2017
