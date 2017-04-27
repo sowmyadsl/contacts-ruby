@@ -6,6 +6,9 @@ require "rspec"
 require "pry"
 
 describe 'Address' do
+  before() do
+    Address.clear()
+  end
 
   it "returns the empty array initially" do
     expect(Address.all()).to eq ([])

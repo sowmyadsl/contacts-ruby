@@ -6,6 +6,9 @@ require "rspec"
 require "pry"
 
 describe 'phone_number' do
+  before() do
+    Phone_number.clear()
+  end
 
   it "returns the empty array initially" do
     expect(Phone_number.all()).to eq ([])

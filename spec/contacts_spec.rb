@@ -7,6 +7,9 @@ require "pry"
 
 
 describe 'Contacts' do
+  before() do
+    Contacts.clear()
+  end
 
   it "returns the empty array initially" do
     expect(Contacts.all()).to eq ([])
