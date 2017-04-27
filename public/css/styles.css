@@ -1,0 +1,19 @@
+.jumbotron {
+  text-align: center;
+}
+
+* {
+  font-family: 'Special Elite', cursive;
+}
+
+.width{
+  width: 45%;
+}
+
+button{
+  margin-top: 10px;
+}
+
+label{
+  font-size: 20px;
+}
