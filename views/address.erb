@@ -1,0 +1,22 @@
+ <form action="/address" method= "post">
+  <div class="form-group">
+    <input name='id' type='hidden' value='<%= @contact.id() %>'>
+    <label for="type">type:</label>
+    <select class="type" name="type">
+      <option value="home">home</option>
+      <option value="work">work</option>
+      <option value="other">other</option>
+    </select>
+    <br>
+    <label for="street_address">Enter street address:</label>
+    <input name="street_address" class="form-control" type="text">
+    <label for="city">Enter city:</label>
+    <input name="city" class="form-control" type="text">
+    <label for="state">Enter state:</label>
+    <input name="state" class="form-control" type="text">
+    <label for="zip_code">Enter zip-code:</label>
+    <input name="zip_code" class="form-control" type="number">
+  </div>
+  <hr>
+  <button action="/address" class="btn btn-success">Add address</button>
+</form>

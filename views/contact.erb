@@ -1,0 +1,37 @@
+<h3> <%= @contact.first_name().+(" ").+(@contact.last_name) %> </h3>
+<h3> <%= "Jobtitle: "+@contact.job_title() %> </h3>
+<h3> <%= "Company: "+@contact.company() %> </h3>
+<% @contact.addresses().each do |address|%>
+  <div>
+    <h3><%= address.type %></h3>
+    <h4>
+      <%= address.street_address %><br>
+      <%= address.city %>, <%= address.state %><br>
+      <%= address.zip_code %>
+    </h4>
+  </div>
+<% end %>
+
+<% @contact.phone_numbers().each do |phone_number|%>
+  <div>
+    <h3><%= phone_number.type %></h3>
+    <h4>
+      (<%= phone_number.area_code %>)<%= phone_number.number %> ext:<%= phone_number.extension %>
+    </h4>
+  </div>
+<% end %>
+
+<% @contact.emails().each do |email|%>
+  <div>
+    <h3><%= email.type %></h3>
+    <h4>
+       email: <%= email.email_address %>  
+    </h4>
+  </div>
+<% end %>
+
+<input name='id' type='hidden' value='<%= @contact.id() %>'>
+<a href="/contacts/<%= @contact.id() %>/address"><button type="button" name="address">Add Address</button></a>
+<a href="/contacts/<%= @contact.id() %>/phone_number"><button type="button" name="phone_number">Add Phone Number</button></a>
+<a href="/contacts/<%= @contact.id() %>/email"><button type="button" name="email">Add Email</button></a>
+<a href="/"><button type="button" name="home">Home</button></a>

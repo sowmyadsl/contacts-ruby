@@ -1,0 +1,16 @@
+<form action="/email" method= "post">
+ <div class="form-group">
+   <input name='id' type='hidden' value='<%= @contact.id() %>'>
+   <label for="type">type:</label>
+   <select class="type" name="type">
+     <option value="home">home</option>
+     <option value="work">work</option>
+     <option value="other">other</option>
+   </select>
+   <br>
+   <label for="email_address">Enter email address:</label>
+   <input name="email_address" class="form-control" type="text">
+ </div>
+ <hr>
+ <button action="/email" class="btn btn-success">Add email address</button>
+</form>

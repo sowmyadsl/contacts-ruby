@@ -1,6 +1,3 @@
-require "contacts"
-require "address"
-require "email"
 
 class Phone_number
   @@phone_numbers = []

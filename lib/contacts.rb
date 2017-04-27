@@ -1,6 +1,6 @@
-require "address"
-require "email"
-require "phone_number"
+require_relative './contacts'
+require_relative "./email"
+require_relative "./phone_number"
 
 class Contacts
   @@contacts = []

@@ -1,7 +1,3 @@
-require "contacts"
-require "email"
-require "phone_number"
-
 class Address
   @@addresses = []
   attr_accessor(:type,:street_address,:city,:state,:zip_code)
